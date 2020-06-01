@@ -27,5 +27,17 @@
 </head>
 <body>
   <h1>Hello World</h1>
+
+  <?php if(mysqli_num_rows($result) > 0): ?>
+    <ul>
+      <?php while($row = mysqli_fetch_object($result)): ?>
+        <li><?php echo $row->text; ?></li>
+      <?php endwhile; ?>
+      </ul>
+      <?php else: ?>
+        <p>No Posts</p>
+      <?php endif; ?>
+
+
 </body>
 </html>
