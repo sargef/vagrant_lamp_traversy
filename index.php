@@ -6,7 +6,7 @@
   $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
   if(! $conn){
-    die('Could not connect: ' mysqli_error());
+    die('Could not connect: ' . mysqli_error());
   }
   echo 'Connected Successfully';
   mysqli_select_db($conn, 'test');
